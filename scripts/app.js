@@ -120,7 +120,7 @@ app.controller("IndexCtrl", function($scope, $timeout, $cookies, generatePasswor
         $event.stopPropagation();
     };
 
-    $scope.convince = function () {
+    $scope.convince = function ($event) {
         console.log($scope.showConvince);
         $scope.showConvince = false;
         $timeout(function () {
@@ -128,6 +128,8 @@ app.controller("IndexCtrl", function($scope, $timeout, $cookies, generatePasswor
 
         }, 100);
         console.log($scope.showConvince);
+        $event.preventDefault();
+        $event.stopPropagation();
     };
 
 
