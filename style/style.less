@@ -1,0 +1,245 @@
+
+@grey: #5b6567;
+//@grey: #282c34;
+
+@colors: red, green, blue, violet, pink, black, white;
+.ui.toggle.checkbox {
+    .-(@i: length(@colors)) when (@i > 0) {
+        @c: extract(@colors, @i);
+        &.@{c} {
+            input:checked~label {
+                color: @c!important;
+                &:before { background-color: @c!important; }
+            }
+        }
+        .-((@i - 1));
+    } .-;
+}
+
+
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+
+body{
+    background: url('../img/blur.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    vertical-align: middle;
+    text-align: center;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+textarea {
+    resize: none!important;
+}
+
+input[type="checkbox"] + label {
+    cursor: pointer!important;
+}
+
+.ui.checkbox input[type="checkbox"].checkbox-massive {
+    /* Double-sized Checkboxes */
+// -ms-transform: scale(2)!important; /* IE */
+// -moz-transform: scale(2)!important; /* FF */
+// -webkit-transform: scale(2)!important;
+// -o-transform: scale(2)!important;
+// transform: scale(4)!important;
+// width: 50px;
+// height: 50px;
+// zoom: 4;
+}
+
+
+.header-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+
+    &-buttons {
+        float: right;
+        display: inline-block;
+    }
+
+    &-logo {
+        height: 35px;
+        &-container {
+            display: inline-block;
+            float: left;
+        }
+    }
+
+    &-button {
+        display: inline-block;
+        cursor: pointer;
+        padding: 7px 0px;
+
+        & + & {
+            margin-left: 20px;
+        }
+    }
+
+    .icon {
+        transition: 2s color;
+        -webkit-transition: 2s color;
+        -o-transition: 2s color;
+        -moz-color: 2s color;
+
+        &:hover {
+            color: black;
+        }
+    }
+}
+
+
+.main {
+    display: inline-block;
+    vertical-align: middle;
+    width: 600px;
+    text-align: center;
+}
+
+.invisible {
+    height: 100%;
+    display: inline-block;
+    width: 1px;
+    vertical-align: middle;
+}
+
+.password {
+    font-size: 25px;
+    line-height: 25px;
+    height: 50px;
+    display: inline;
+    background: transparent;
+    outline: none;
+    text-align: center;
+    width: auto;
+    resize: none;
+    user-select: text;
+    -moz-user-select: text;
+    -webkit-user-select: text;
+    -ms-user-select: text;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    padding: 10px;
+    -webkit-transition: border-color 0.5s;
+    -moz-transition: border-color 0.5s;
+    -o-transition: border-color 0.5s;
+    transition: border-color 0.5s;
+
+    cursor: copy;
+
+        &:hover, &-active {
+            border: 2px solid black;
+        }
+
+        &::selection {
+            background: black;
+            color: white;
+        }
+}
+
+.settings-panel {
+    @width: 400px;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    bottom: 0;
+    width: @width;
+    right: -@width*1.5;
+    background: white;
+    box-shadow: black 5px 0px 10px 2px;
+
+    -webkit-transition: right 0.4s;
+    -moz-transition: right 0.4s;
+    -o-transition: right 0.4s;
+    transition: right 0.4s;
+
+    padding: 20px;
+
+    &-active {
+        right: 0px;
+    }
+
+    &-background {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background: transparent;
+    }
+
+    &-title {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1.2em;
+        margin-top: 0px!important;
+        margin-bottom: 40px!important;
+    }
+
+    &-content {
+        text-align: left;
+    }
+
+    &-button {
+        // position: absolute;
+        // z-index: 10000000;
+        // top: 20px;
+        // left: 20px;
+        float: right;
+        cursor: pointer;
+    }
+
+    &-cookies {
+        position: absolute;
+        z-index: 100;
+        bottom: 40px;
+        left: 20px;
+        right: 20px;
+        // background: red;
+        text-align: left;
+        // font-size: 3em!important;
+
+        &-save {
+            display: block!important;
+            width: 100%;
+        }
+    }
+}
+
+.convince {
+
+    &-title {
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 1.3em;
+    }
+    &-part {
+        text-align: center;
+        font-size: 1.2em;
+
+    }
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 10px;
+}

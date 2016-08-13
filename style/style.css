@@ -1,0 +1,218 @@
+.ui.toggle.checkbox.white input:checked ~ label {
+  color: white !important;
+}
+.ui.toggle.checkbox.white input:checked ~ label:before {
+  background-color: white !important;
+}
+.ui.toggle.checkbox.black input:checked ~ label {
+  color: black !important;
+}
+.ui.toggle.checkbox.black input:checked ~ label:before {
+  background-color: black !important;
+}
+.ui.toggle.checkbox.pink input:checked ~ label {
+  color: pink !important;
+}
+.ui.toggle.checkbox.pink input:checked ~ label:before {
+  background-color: pink !important;
+}
+.ui.toggle.checkbox.violet input:checked ~ label {
+  color: violet !important;
+}
+.ui.toggle.checkbox.violet input:checked ~ label:before {
+  background-color: violet !important;
+}
+.ui.toggle.checkbox.blue input:checked ~ label {
+  color: blue !important;
+}
+.ui.toggle.checkbox.blue input:checked ~ label:before {
+  background-color: blue !important;
+}
+.ui.toggle.checkbox.green input:checked ~ label {
+  color: green !important;
+}
+.ui.toggle.checkbox.green input:checked ~ label:before {
+  background-color: green !important;
+}
+.ui.toggle.checkbox.red input:checked ~ label {
+  color: red !important;
+}
+.ui.toggle.checkbox.red input:checked ~ label:before {
+  background-color: red !important;
+}
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+body {
+  background: url('../img/blur.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  text-align: center;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+textarea {
+  resize: none!important;
+}
+input[type="checkbox"] + label {
+  cursor: pointer!important;
+}
+.ui.checkbox input[type="checkbox"].checkbox-massive {
+  /* Double-sized Checkboxes */
+}
+.header-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+}
+.header-top-buttons {
+  float: right;
+  display: inline-block;
+}
+.header-top-logo {
+  height: 35px;
+}
+.header-top-logo-container {
+  display: inline-block;
+  float: left;
+}
+.header-top-button {
+  display: inline-block;
+  cursor: pointer;
+  padding: 7px 0px;
+}
+.header-top-button + .header-top-button {
+  margin-left: 20px;
+}
+.header-top .icon {
+  transition: 2s color;
+  -webkit-transition: 2s color;
+  -o-transition: 2s color;
+  -moz-color: 2s color;
+}
+.header-top .icon:hover {
+  color: black;
+}
+.main {
+  display: inline-block;
+  vertical-align: middle;
+  width: 600px;
+  text-align: center;
+}
+.invisible {
+  height: 100%;
+  display: inline-block;
+  width: 1px;
+  vertical-align: middle;
+}
+.password {
+  font-size: 25px;
+  line-height: 25px;
+  height: 50px;
+  display: inline;
+  background: transparent;
+  outline: none;
+  text-align: center;
+  width: auto;
+  resize: none;
+  user-select: text;
+  -moz-user-select: text;
+  -webkit-user-select: text;
+  -ms-user-select: text;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  padding: 10px;
+  -webkit-transition: border-color 0.5s;
+  -moz-transition: border-color 0.5s;
+  -o-transition: border-color 0.5s;
+  transition: border-color 0.5s;
+  cursor: copy;
+}
+.password:hover,
+.password-active {
+  border: 2px solid black;
+}
+.password::selection {
+  background: black;
+  color: white;
+}
+.settings-panel {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  width: 400px;
+  right: -600px;
+  background: white;
+  box-shadow: black 5px 0px 10px 2px;
+  -webkit-transition: right 0.4s;
+  -moz-transition: right 0.4s;
+  -o-transition: right 0.4s;
+  transition: right 0.4s;
+  padding: 20px;
+}
+.settings-panel-active {
+  right: 0px;
+}
+.settings-panel-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: transparent;
+}
+.settings-panel-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  margin-top: 0px!important;
+  margin-bottom: 40px!important;
+}
+.settings-panel-content {
+  text-align: left;
+}
+.settings-panel-button {
+  float: right;
+  cursor: pointer;
+}
+.settings-panel-cookies {
+  position: absolute;
+  z-index: 100;
+  bottom: 40px;
+  left: 20px;
+  right: 20px;
+  text-align: left;
+}
+.settings-panel-cookies-save {
+  display: block!important;
+  width: 100%;
+}
+.convince-title {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.3em;
+}
+.convince-part {
+  text-align: center;
+  font-size: 1.2em;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 10px;
+}
