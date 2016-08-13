@@ -121,7 +121,13 @@ app.controller("IndexCtrl", function($scope, $timeout, $cookies, generatePasswor
     };
 
     $scope.convince = function () {
-        $scope.showConvince = true;
+        console.log($scope.showConvince);
+        $scope.showConvince = false;
+        $timeout(function () {
+            $scope.showConvince = true;
+
+        }, 100);
+        console.log($scope.showConvince);
     };
 
 
