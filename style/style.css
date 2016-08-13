@@ -68,6 +68,9 @@ input[type="checkbox"] + label {
 .ui.checkbox input[type="checkbox"].checkbox-massive {
   /* Double-sized Checkboxes */
 }
+.ui.modal.basic > .actions {
+  text-align: center!important;
+}
 .header-top {
   position: absolute;
   top: 0;
@@ -208,6 +211,9 @@ input[type="checkbox"] + label {
 .convince-part {
   text-align: center;
   font-size: 1.2em;
+}
+.convince-icon {
+  text-align: center;
 }
 .footer {
   position: absolute;
