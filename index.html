@@ -18,9 +18,9 @@
             </div>
             <div class="header-top-buttons">
                 <!-- <a href="">Why should you always generate-password.github.io?</a> -->
-                <span class="header-top-button" ng-click="refresh()" data-tooltip="Generate a new password" data-inverted="" data-position="bottom right">
+                <!-- <span class="header-top-button" ng-click="refresh()" data-tooltip="Generate a new password" data-inverted="" data-position="bottom right">
                     <i class="icon refresh big" ng-class="{'loading':refreshing}" ></i>
-                </span>
+                </span> -->
                 <span class="header-top-button" ng-click="convince($event)" data-tooltip="Why should you use it." data-inverted="" data-position="bottom right">
                     <i class="icon info big" ></i>
                 </span>
@@ -42,6 +42,11 @@
               </div>
             </div> -->
             <password new-password="newPassword"></password>
+
+            <span class="main-button" ng-click="refresh()">
+                <i class="icon refresh big" ng-class="{'loading':refreshing}" ></i>
+            </span>
+
         </div>
         <div class="invisible"></div>
         <footer class="footer">

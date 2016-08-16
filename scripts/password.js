@@ -4,11 +4,11 @@ app.directive('password', function($timeout, $interval) {
         replace: true,
         transclude: false,
         scope: { newPassword: "=" },
-        template: '<textarea class="password" readonly ng-click="pasteInClipboard($event)" data-content="copied to clipboard" data-variation="inverted">{{password}}</textarea>',
+        template: '<textarea class="password" row="1" readonly ng-click="pasteInClipboard($event)" data-content="copied to clipboard" data-position="top center" data-variation="inverted">{{password}}</textarea>',
         link: function ($scope, element) {
 
             $scope.password = '';
-            $scope.pitch = 70;
+            $scope.pitch = 50;
             $scope.interval = null;
             $scope.index = 0;
 
