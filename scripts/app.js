@@ -6,7 +6,7 @@ app.controller("IndexCtrl", function($scope, $timeout, $cookies, generatePasswor
     $scope.showConvince = false;
 
     $scope.length = 16;
-    $scope.pool = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ/.?,;:!*$=+}])@_-[({\'"#~&<>';
+    $scope.pool = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ/.?,;:!*$=+}])@_-[({\'"#~&<>0123456789';
     $scope.similarCharacters = 'iIL1o0O';
     $scope.excludeSimilars = true;
 
@@ -58,28 +58,28 @@ app.controller("IndexCtrl", function($scope, $timeout, $cookies, generatePasswor
 
         $scope.$watch('length', function () {
             if ($scope.save) {
-                $cookies.put('length', $scope.length);
+                $cookies.put('length', $scope.length,{'expires': (new Date() + 365)}  );
             }
             $scope.refresh();
         });
 
         $scope.$watch('pool', function () {
             if ($scope.save) {
-                $cookies.put('pool', $scope.pool);
+                $cookies.put('pool', $scope.pool, {'expires': (new date() + 365)});
             }
             $scope.refresh();
         });
 
         $scope.$watch('similarCharacters', function () {
             if ($scope.save) {
-                $cookies.put('similar-characters', $scope.similarCharacters);
+                $cookies.put('similar-characters', $scope.similarCharacters,{'expires': (new Date() + 365)});
             }
             $scope.refresh();
         });
 
         $scope.$watch('excludeSimilars', function () {
             if ($scope.save) {
-                $cookies.put('exclude-similars', $scope.excludeSimilars);
+                $cookies.put('exclude-similars', $scope.excludeSimilars,{'expires': (new Date() + 365)});
                 var cookies = $cookies.getAll();
                 //console.log(cookies);
             }
@@ -88,10 +88,10 @@ app.controller("IndexCtrl", function($scope, $timeout, $cookies, generatePasswor
 
         $scope.$watch('save', function () {
             if ($scope.save) {
-                $cookies.put('length', $scope.length);
-                $cookies.put('pool', $scope.pool);
-                $cookies.put('similar-characters', $scope.similarCharacters);
-                $cookies.put('exclude-similars', $scope.excludeSimilars);
+                $cookies.put('length', $scope.length,{'expires': (new Date() + 365)});
+                $cookies.put('pool', $scope.pool,{'expires': (new Date() + 365)});
+                $cookies.put('similar-characters', $scope.similarCharacters,{'expires': (new Date() + 365)});
+                $cookies.put('exclude-similars', $scope.excludeSimilars,{'expires': (new Date() + 365)});
                 $cookies.put('save', $scope.save);
 
                 var cookies = $cookies.getAll();
