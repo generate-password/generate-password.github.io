@@ -13,6 +13,8 @@ app.controller("IndexCtrl", function($scope, $timeout, $cookies, generatePasswor
     $scope.save = false;
     $scope.startRefreshing = false;
 
+    $scope.theme = 'blue';
+
     var cookies = $cookies.getAll();
     //console.log(cookies);
 
@@ -41,7 +43,7 @@ app.controller("IndexCtrl", function($scope, $timeout, $cookies, generatePasswor
             $scope.refreshing = true;
             $timeout(function () {
                 $scope.refreshing = false;
-            }, 1000);
+            }, 700);
         }
         $scope.newPassword = generatePassword({
             length: $scope.length,
@@ -65,7 +67,7 @@ app.controller("IndexCtrl", function($scope, $timeout, $cookies, generatePasswor
 
         $scope.$watch('pool', function () {
             if ($scope.save) {
-                $cookies.put('pool', $scope.pool, {'expires': (new date() + 365)});
+                $cookies.put('pool', $scope.pool, {'expires': (new Date() + 365)});
             }
             $scope.refresh();
         });

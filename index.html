@@ -5,15 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Generate a strong password</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.2/semantic.min.css" >
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro" rel="stylesheet">
         <link rel='stylesheet' href='style/style.css' />
         <link rel="icon" type="image/png" href="img/p.png" />
 
 	</head>
-	<body ng-app="generatePassword" ng-controller="IndexCtrl" ng-click="hideSettings($event)" class="ui">
+	<body ng-app="generatePassword" ng-controller="IndexCtrl" ng-click="hideSettings($event)" class="ui theme-{{theme}}" >
         <modal show="showConvince"></modal>
         <header class="header-top">
             <div class="header-top-logo-container">
-                <img src="img/p.png" class="header-logo">
+                <img src="img/p.white.png" class="header-logo">
             </div>
             </div>
             <div class="header-top-buttons">
@@ -22,10 +24,12 @@
                     <i class="icon refresh big" ng-class="{'loading':refreshing}" ></i>
                 </span> -->
                 <span class="header-top-button" ng-click="convince($event)" data-tooltip="Why should you use it." data-inverted="" data-position="bottom right">
-                    <i class="icon info big" ></i>
+                    <!-- <i class="icon info big" ></i> -->
+                    <i class="zmdi zmdi-info-outline"></i>
                 </span>
                 <span class="header-top-button" ng-click="toggleSettings($event)" data-tooltip="Settings" data-inverted="" data-position="bottom right">
-                    <i class="icon settings big" ></i>
+                    <!-- <i class="icon settings big" ></i> -->
+                    <i class="zmdi zmdi-settings"></i>
                 </span>
             </div>
         </header>
@@ -44,7 +48,8 @@
             <password new-password="newPassword"></password>
 
             <span class="main-button" ng-click="refresh()">
-                <i class="icon refresh big" ng-class="{'loading':refreshing}" ></i>
+                <i class="zmdi zmdi-refresh-alt" ng-class="{'zmdi-hc-spin':refreshing}" ></i>
+                <!-- <i class="icon refresh big" ng-class="{'loading':refreshing}" ></i> -->
             </span>
 
         </div>
@@ -55,7 +60,8 @@
 
         <div class="settings-panel" ng-class="{'settings-panel-active':settingsActive}" ng-click="$event.stopPropagation()">
             <div class="settings-panel-button" ng-click="hideSettings()">
-                <i class="ui icon close large"></i>
+                <!-- <i class="ui icon close large"></i> -->
+                <i class="zmdi zmdi-close"></i>
             </div>
             <h1 class="settings-panel-title">Customize your password</h1>
             <div class="settings-panel-content">

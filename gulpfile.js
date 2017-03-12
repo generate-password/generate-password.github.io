@@ -6,7 +6,7 @@ var watch = require('gulp-watch');
 gulp.task('start', function () {
     nodemon({
         script: './dev/dev.js',
-        env: { 'NODE_ENV': 'development', 'PORT': 8080 }
+        env: { 'NODE_ENV': 'development', 'PORT': 8081 }
     });
     gulp.start(['watch-less']);
 });

@@ -2,6 +2,9 @@
 @grey: #5b6567;
 //@grey: #282c34;
 
+@teal: #134e5e;
+@blue: #090437;
+
 @colors: red, green, blue, violet, pink, black, white;
 .ui.toggle.checkbox {
     .-(@i: length(@colors)) when (@i > 0) {
@@ -26,7 +29,9 @@ html, body {
 
 
 body{
-    background: url('../img/blur.jpg');
+    // background: url('../img/dawn.jpg');
+    // background: url('../img/wolf-howling-to-moon.jpg');
+    background: url('../img/horizon.png');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -88,17 +93,19 @@ input[type="checkbox"] + label {
         display: inline-block;
         cursor: pointer;
         padding: 7px 0px;
+        margin-right: 20px;
 
         & + & {
             margin-left: 20px;
         }
     }
 
-    .icon {
+    .zmdi {
         transition: 2s color;
         -webkit-transition: 2s color;
         -o-transition: 2s color;
         -moz-color: 2s color;
+        font-size: 30px;
 
         &:hover {
             color: black;
@@ -127,6 +134,26 @@ input[type="checkbox"] + label {
         &:hover {
             opacity: 1;
         }
+
+        .zmdi {
+            font-size: 45px;
+        }
+    }
+}
+
+.theme-teal {
+    .main-button {
+        .zmdi {
+            color: @teal;
+        }
+    }
+}
+
+.theme-blue {
+    .main-button {
+        .zmdi {
+            color: @blue;
+        }
     }
 }
 
@@ -152,16 +179,17 @@ input[type="checkbox"] + label {
     -webkit-user-select: text;
     -ms-user-select: text;
     border: 2px solid transparent;
-    border-radius: 5px;
+    border-radius: 3px;
     padding: 10px;
     -webkit-transition: border-color 0.5s;
     -moz-transition: border-color 0.5s;
     -o-transition: border-color 0.5s;
     transition: border-color 0.5s;
     vertical-align: middle;
-    margin-left: 33px;
+    margin-left: 43px;
+    margin-right: 10px;
     overflow: hidden;
-
+    font-family: 'Anonymous Pro', monospace;
     cursor: copy;
 
         &:hover, &-active {
@@ -172,6 +200,88 @@ input[type="checkbox"] + label {
             background: black;
             color: white;
         }
+
+
+        &:focus {
+            background: black;
+            color: white;
+        }
+}
+
+.theme-dark {
+    .password {
+
+        color: white;
+
+        &:hover, &-active {
+            border: 2px solid white;
+        }
+
+        &::selection {
+            background: white;
+            color: black;
+        }
+
+
+        &:focus {
+            background: white;
+            color: black;
+        }
+    }
+}
+
+.theme-teal {
+
+    .main-button {
+        color: @teal;
+    }
+    @color: @teal;
+    .password {
+
+        color: @color;
+
+        &:hover, &-active {
+            border: 2px solid @color;
+        }
+
+        &::selection {
+            background: @color;
+            color: white;
+        }
+
+
+        &:focus {
+            background: @color;
+            color: white;
+        }
+    }
+}
+
+.theme-blue {
+
+    .main-button {
+        color: @blue;
+    }
+    @color: @teal;
+    .password {
+
+        color: @color;
+
+        &:hover, &-active {
+            border: 2px solid @color;
+        }
+
+        &::selection {
+            background: @color;
+            color: white;
+        }
+
+
+        &:focus {
+            background: @color;
+            color: white;
+        }
+    }
 }
 
 .settings-panel {
@@ -225,6 +335,10 @@ input[type="checkbox"] + label {
         // left: 20px;
         float: right;
         cursor: pointer;
+
+        .zmdi {
+            font-size: 20px;
+        }
     }
 
     &-cookies {
@@ -269,4 +383,38 @@ input[type="checkbox"] + label {
     left: 0;
     right: 0;
     padding-bottom: 10px;
+}
+
+.theme-dark {
+    .zmdi {
+        color: white;
+    }
+
+    .footer {
+        color: white;
+    }
+}
+
+.theme-teal {
+
+    .zmdi {
+        color: white;
+    }
+
+
+    .footer {
+        color: white;
+    }
+}
+
+.theme-blue {
+
+    .zmdi {
+        color: white;
+    }
+
+
+    .footer {
+        color: white;
+    }
 }
