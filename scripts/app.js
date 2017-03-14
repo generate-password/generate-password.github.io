@@ -7,7 +7,7 @@ app.controller("IndexCtrl", function($scope, $timeout, $cookies, generatePasswor
 
     $scope.length = 16;
     $scope.pool = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ/.?,;:!*$=+}])@_-[({\'"#~&<>0123456789';
-    $scope.similarCharacters = 'iIL1o0O';
+    $scope.similarCharacters = 'iIlL1o0O';
     $scope.excludeSimilars = true;
 
     $scope.save = false;
